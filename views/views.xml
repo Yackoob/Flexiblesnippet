@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Vues -->
+    <record id="view_flexible__snippet_tree" model="ir.ui.view">
+        <field name="name">flexible__snippet.tree</field>
+        <field name="model">flexible__snippet</field>
+        <field name="arch" type="xml">
+            <tree string="Actualités">
+                <field name="titre"/>
+                <field name="text"/>
+                <field name="date"/>
+                <field name="document_file"/>
+
+            </tree>
+        </field>
+    </record>
+
+    <record id="view_flexible__snippet_form" model="ir.ui.view">
+        <field name="name">flexible__snippet.form</field>
+        <field name="model">flexible__snippet</field>
+        <field name="arch" type="xml">
+            <form string="Actualités">
+                <sheet>
+                    <group>
+                        <field name="titre"/>
+                        <field name="text"/>
+                        <field name="date"/>
+                        <field name="document_filename" invisible="1"/>
+                        <field name="document_file" filename="document_filename"/>
+
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Action -->
+    <record id="action_flexible__snippet" model="ir.actions.act_window">
+        <field name="name">Actualités</field>
+        <field name="res_model">flexible__snippet</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_id" ref="view_flexible__snippet_tree"/>
+    </record>
+
+    <!-- Menu Items -->
+    <menuitem id="menu_flexible__snippet_root" name="Flexible snippet" />
+
+    <menuitem id="menu_flexible__snippet" name="Gérer les flexible Actualités" parent="menu_flexible__snippet_root" />
+
+    <menuitem id="menu_flexible__snippet_items" name="Articles" parent="menu_flexible__snippet" action="action_flexible__snippet" />
+
+</odoo>

@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<odoo>
+    <template id="flexible__snippet.templata" name="Survey User Input Session">
+        <t t-call="website.layout">
+            <div class="oe_structure"/>
+
+            <section class="container">
+                <h1 class="text-center mt32"><t t-esc="record.titre"/></h1>
+
+                <div class="oe_structure"/>
+
+                <p class="text-left mt32">
+                    <t t-esc="record.text"/>
+                </p>
+                <p class="text-left mt32">
+                   <b>Publié le : </b> <t t-esc="record.date"/>
+                </p>
+            </section>
+
+            <div class="oe_structure"/>
+        </t>
+    </template>
+</odoo>
+
+

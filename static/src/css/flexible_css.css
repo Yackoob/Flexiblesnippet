@@ -1,0 +1,170 @@
+.actualites-container {
+    display: flex;
+    flex-direction: column;
+    gap: 20px; /* Espace entre les cartes */
+}
+
+.actualite-card {
+    border: 1px solid #b5b1b1; /* Bordure légère */
+    border-radius: 8px; /* Coins arrondis */
+  /*  box-shadow: 0 4px 8px rgb(10, 10, 10);  Ombre */
+    padding: 15px; /* Espace interne */
+    background-color: white; /* Fond */
+    transition: transform 0.3s ease; /* Transition pour l'effet de survol */
+    text-align: left; /* Aligner le texte à gauche */
+}
+
+.actualite-card:hover {
+    transform: scale(1.02); /* Agrandir légèrement au survol */
+}
+
+.actualite-field {
+    margin-bottom: 10px; /* Espace entre les champs */
+    display: flex; /* Utiliser flexbox pour l'alignement */
+    align-items: center; /* Aligner verticalement les éléments */
+}
+
+.field-name {
+    font-weight: bold; /* Rendre le nom du champ en gras */
+    color: #333; /* Couleur du nom du champ */
+    margin-right: 5px; /* Espace entre le nom du champ et sa valeur */
+    white-space: nowrap; /* Empêcher le texte de se décaler */
+}
+
+.field-value {
+   /* font-style: italic;  Style de la valeur du champ */
+    color: #666; /* Couleur de la valeur du champ */
+}
+
+.no-data {
+    font-size: 1.2rem;
+    color: #999;
+    text-align: left; /* Aligner le texte à gauche */
+}
+
+
+
+#abc {
+    display: inline-flex;
+    align-items: center;
+    justify-content: right;
+    padding: 8px 16px;
+    font-size: 14px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #b700ff; /* Couleur pour le bouton */
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    /* Alignement à droite */
+    margin-left: auto;
+}
+
+
+
+.link-container btn-primary:hover {
+    background-color: rgba(222, 71, 71, 0.99); /* Couleur bleue foncée au survol */
+}
+
+.link-container i {
+    margin-right: 8px; /* Espacement entre l'icône et le texte */
+}
+
+
+
+
+
+/* Styles pour l'élément avec l'ID title */
+#title {
+
+    font-size: 18px; /* Taille de la police pour le titre */
+    font-weight: bold; /* Mettre le texte en gras */
+    color: #000000; /* Couleur bleue pour le titre */
+    background-color: rgba(241, 243, 244, 0); /* Fond gris clair pour se démarquer */
+    padding: 10px; /* Espacement intérieur */
+    border-radius: 5px; /* Coins arrondis */
+    display: block; /* Pour s'assurer que l'élément occupe toute la largeur disponible */
+    margin-bottom: 10px; /* Espacement en dessous de l'élément */
+}
+
+/* Styles pour l'élément avec l'ID body */
+#body {
+    font-size: 16px; /* Taille de la police pour le corps du texte */
+    /* font-style: italic; Texte en italique pour le corps */
+    color: #333; /* Couleur sombre pour le texte */
+    background-color: rgba(232, 245, 233, 0); /* Fond vert clair pour se démarquer */
+    padding: 15px; /* Espacement intérieur */
+   /* border-left: 5px solid #66bb6a;  Bordure verte à gauche */
+    border-radius: 5px; /* Coins arrondis */
+    display: block; /* Pour s'assurer que l'élément occupe toute la largeur disponible */
+    margin-bottom: 10px; /* Espacement en dessous de l'élément */
+}
+
+/* Styles pour l'élément avec l'ID Date */
+#Date {
+    font-size: 14px; /* Taille de la police pour la date */
+    color: #000000; /* Couleur grise pour la date */
+    background-color: rgba(245, 245, 245, 0); /* Fond gris très clair pour se démarquer */
+    padding: 8px; /* Espacement intérieur */
+  /*  border: 1px solid #ddd;  Bordure gris clair */
+  /*  border-radius: 3px;   Coins arrondis */
+    display: block; /* Pour s'assurer que l'élément occupe toute la largeur disponible */
+    text-align: right; /* Alignement du texte à droite */
+}
+
+
+
+
+
+
+
+.centered-content {
+    text-align: center;
+}
+
+
+
+
+
+
+/* Styles généraux pour les boutons de pagination */
+/*.btn-pagination {*/
+/*    cursor: pointer;*/
+/*    padding: 10px 20px;*/
+/*    border: none;*/
+/*    border-radius: 5px;*/
+/*    color: rgba(9, 67, 175, 0);*/
+/*    text-align: center;*/
+/*    font-size: 1rem;*/
+/*    font-weight: bold;*/
+/*    transition: background-color 0.3s ease, color 0.3s ease;*/
+/*}*/
+
+/* Styles spécifiques pour le bouton "Précédent" */
+/*.js_precedent {*/
+/*    background-color: rgba(117, 70, 211, 0); !* Rouge clair *!*/
+/*}*/
+
+/*.js_precedent:hover {*/
+/*    background-color: #cc0000; !* Rouge foncé au survol *!*/
+/*}*/
+
+/*!* Styles spécifiques pour le bouton "Suivant" *!*/
+/*.js_next {*/
+/*    background-color: rgba(117, 70, 211, 0); !* Rouge clair *!*/
+/*}*/
+
+/*.js_next:hover {*/
+/*    background-color: rgb(255, 0, 0); !* Rouge clair *!*/
+/*}*/
+
+/*!* Styles pour les boutons désactivés *!*/
+/*.btn-secondary.disabled {*/
+/*    background-color: #fa4949; !* Gris pour les boutons désactivés *!*/
+/*    color: #f9faff; !* Gris foncé pour le texte *!*/
+/*    cursor: not-allowed; !* Curseur pour indiquer que le bouton est désactivé *!*/
+/*    opacity: 0.5; !* Opacité réduite pour les boutons désactivés *!*/
+/*}*/
+

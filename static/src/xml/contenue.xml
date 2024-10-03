@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+
+
+<template id="snippet_fdddlate">
+
+
+    <t t-name="snippet_flexible.template">
+        <div class="actualites-container">
+
+
+
+            <!-- Affichage des données -->
+            <t t-if="data &amp;&amp; data.length > 0">
+                <t t-foreach="data" t-as="item" t-key="item.id">
+                    <div class="actualite-card"
+                         style="border: 1px solid #e0e0e0; border-radius: 10px; padding: 20px; margin: 20px; background-color: #ffffff; box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); transition: transform 0.2s; cursor: pointer;"
+                         onmouseover="this.style.transform='scale(1.02)'"
+                         onmouseout="this.style.transform='scale(1)'">
+
+
+                        <!-- Affichage des champs dynamiques -->
+                        <div class="actualite-field" style="margin-bottom: 12px;">
+                            <span class="field-name">
+<!--                                   <t t-esc="item[Champs1_name] || 'N/A'"/>-->
+                            </span>
+                            <span class="field-value" id="title" style="font-size: 1.5em; ">
+                                    <b> <t t-esc="item[Champs1_name] || 'N/A'"/> </b>
+                            </span>
+                        </div>
+
+
+
+                        <div class="actualite-field" style="font-weight: bold; color: #333;">
+                            <span class="field-name">
+<!--                                    <t t-esc="item[Champs2_name] || 'N/A'"/>-->
+                            </span>
+
+<!--                             <span class="field-value" id="body"  style="color: #777;">
+                                    <t t-esc="item[Champs2_name] || 'N/A'"/>
+                            </span>-->
+
+
+<!--                      lire en plus     -->
+
+                            <span class="field-value" id="body">
+                                <t t-esc="item[Champs2_name] and item[Champs2_name].slice(0, 200)"/>
+                                <t t-if="item[Champs2_name] and item[Champs2_name].length > 200">
+                                    ...
+                                    <a  class="js_lire_en_plus read-more-link" >
+                                        Lire en plus
+                                    </a>
+                                    <span class="item-id" style="display:none;"><t t-esc='item.id'/></span>
+                                </t>
+                            </span>
+
+
+
+                        </div>
+
+
+                        <div class="actualite-field">
+                            <span class="field-name" style="font-weight: bold; color: #333;">
+                             <b>Publié le :</b>
+                            </span>
+                            <span class="field-value" id="Date" style="color: #777;">
+                                 <t t-esc="item[Champs3_name] || 'N/A'"/>
+                            </span>
+                        </div>
+
+<!--                        <div class="link-container" >
+                             <i class="fas fa-paperclip"></i> Pièce jointe
+                              <span class="field-value">
+                                 <t t-esc="itm.id || 'N/A'"/>
+                            </span>e
+                        </div>-->
+
+                                <!-- Lien pour télécharger la pièce jointe -->
+
+
+                    <div class="link-container" style="margin-top: 15px;">
+                        <a class="js_download btn btn-primary" style="display: inline-flex; align-items: center; text-decoration: none;">
+                            <span class="item-id" style="display:none;"><t t-esc='item.id'/></span>
+                            <i class="fas fa-paperclip" style="margin-right: 5px;"></i>
+                            Pièce jointe
+                        </a>
+                    </div>
+
+
+                        <!-- Ajout de l'ID de l'élément dans le div -->
+                        <!-- Affichage de l'ID de l'élément dans le div -->
+
+
+                    </div>
+                </t>
+            </t>
+
+
+                  <!-- Pagination -->
+                  <div style="display: flex; align-items: center; justify-content: space-between; margin-top: 20px;">
+                    <!-- Bouton Précédent -->
+<!--                    <div class="js_precedent btn btn-primary">« Précédent</div>-->
+
+
+                         <div class="link-container js_precedent btn btn-primary">« Précédent</div>
+
+<!--link-container hadi hia li kat kheli les bouttons yakhdo les couleurs de theme choisis par le user f l menu web -->
+
+                    <!-- Affichage des pages -->
+                    <div>
+                        Pages :
+                        <span id="act_current_page" style="display: inline;">
+                            <t t-esc="currentPage"/>
+                        </span>
+                        /
+                        <span style="display: inline;">
+                            <t t-esc="total_pages"/>
+                        </span>
+                    </div>
+
+                    <!-- Bouton Suivant -->
+                    <div class="link-container js_next btn btn-primary">Suivant »</div>
+                  </div>
+
+        </div>
+    </t>
+</template>

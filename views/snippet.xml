@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+
+    <!-- Template pour le snippet dynamique flexible -->
+    <template id="dynamic_snippet_flexible_template" name="Dynamic Flexible Snippet">
+        <section class="oe_structure container dynamic_snippet_flexible">
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="text-center py-5">
+                        <!-- Conteneur où le contenu flexible sera injecté -->
+                        <div id="flexible_data"/>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </template>
+
+
+    <!-- Template de paramétrage pour le snippet -->
+    <template id="s_dynamic_snippet_flexible_options" inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-js="DynamicSnippetFlexible" data-selector=".dynamic_snippet_flexible">
+
+                <we-select string="Limit">
+                    <we-button data-set-limit="1">1</we-button>
+                    <we-button data-set-limit="2">2</we-button>
+                    <we-button data-set-limit="3">3</we-button>
+                    <we-button data-set-limit="4">4</we-button>
+                    <we-button data-set-limit="5">5</we-button>
+                </we-select>
+
+
+<!--                   <we-select string="model" id="model-select">-->
+<!--                        <we-button data-set-model="res.partner">res.partner</we-button>-->
+<!--                        <we-button data-set-model="sale.order">sale.order</we-button>-->
+<!--                        <we-button data-set-model="flexible__snippet">flexible__snippet</we-button>-->
+<!--                    </we-select>-->
+
+
+                <we-input string="model"    data-set-model="" />
+
+                <we-input string="Title" data-set-Champs1="" />
+
+                <we-input string="Body" data-set-Champs2="" />
+
+                <we-input string="Date" data-set-Champs3="" />
+
+                <we-input string="Pièce jointe" data-set-Champs4="" />
+
+
+
+<!--
+                <we-select string="Fields" id="field-select">
+                    <t t-foreach="fieldsMap" t-as="field">
+                        <we-button data-set-field="field"><t t-esc="fieldsMap[field]"/></we-button>
+                    </t>
+                </we-select>-->
+
+
+
+
+
+
+
+<!--
+
+
+
+                  -->
+
+
+
+
+            </div>
+        </xpath>
+    </template>
+
+
+  <!--  <template id="flexible__snippet.ModelFieldsSelector" inherit_id="website.snippet_options" >
+        <xpath expr="." position="inside">
+             <div data-js="DynamicSnippetFlexible" data-selector=".dynamic_snippet_flexible">
+                <div>
+                    <h2>Modèle sélectionné : {{ modelName }}</h2>
+
+                    <div class="field-selection">
+                        <t t-foreach="fieldsMap" t-as="field">
+                            <label>
+                                <input type="checkbox" t-att-value="field" />
+                                <span t-esc="fieldsMap[field]"></span>
+                            </label>
+                        </t>
+                    </div>
+
+                    <button t-on-click="applySelections">Appliquer</button>
+
+                    <div t-if="selectedFields.length">
+                        <h3>Champs sélectionnés :</h3>
+                        <ul>
+                            <t t-foreach="selectedFields" t-as="field">
+                                <li><t t-esc="field"/></li>
+                            </t>
+                        </ul>
+                    </div>
+                </div>
+             </div>
+        </xpath>
+    </template>-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--
+
+     Template de paramétrage pour le snippet
+    <template id="s_dynamic_snippet_flexible_options_2" inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-js="DynamicSnippetFlexible" data-selector=".dynamic_snippet_flexible">
+                     Combobox pour choisir le nombre d'éléments par page
+                    <we-select string="model">
+                        <we-button data-set-model="res.partner">res.partner</we-button>
+                        <we-button data-set-model="sale.order">sale.order</we-button>
+                        <we-button data-set-model="snippetactualites">snippetactualites</we-button>
+                    </we-select>
+
+                  <we-input string="Title" data-set-Title="" />
+                  <we-input string="Body" data-set-Body="" />
+                  <label for="my-date-input" class="date-label">Date :    </label>
+                  <input type="date"  data-set-Date=""/>
+            </div>
+        </xpath>
+    </template>
+
+ Tnez 66666666666666666666666666666666666666666666666666
+
+         Template de paramétrage pour le snippet
+    <template id="s_dynamic_actualites_options_23" inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-js="DynamicSnippetFlexible" data-selector=".dynamic_snippet_flexible">
+                 Combobox pour choisir le nombre d'actualités par page
+                 <we-input string="Title" data-set-Title="" />
+                <we-input string="Body" data-set-Body="" />
+                <label for="my-date-input" class="date-label">Date :    </label>
+               <input type="date"  data-set-Date=""/>
+
+            </div>
+        </xpath>
+    </template>
+
+
+
+            &lt;!&ndash; Template de paramétrage pour le snippet &ndash;&gt;
+    <template id="s_dynamic_actualites_options_24" inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-js="DynamicSnippetFlexible" data-selector=".dynamic_snippet_flexible">
+                &lt;!&ndash; Combobox pour choisir le nombre d'actualités par page &ndash;&gt;
+                 <we-input string="Body" data-set-Body="" />
+            </div>
+        </xpath>
+    </template>
+
+
+                &lt;!&ndash; Template de paramétrage pour le snippet &ndash;&gt;
+    <template id="s_dynamic_actualites_options_25" inherit_id="website.snippet_options">
+        <xpath expr="." position="inside">
+            <div data-js="DynamicSnippetFlexible" data-selector=".dynamic_snippet_flexible">
+
+               <label for="my-date-input" class="date-label">Date :    </label>
+               <input type="date"  data-set-Date=""/>
+
+                &lt;!&ndash; Combobox pour choisir le nombre d'actualités par page &ndash;&gt;
+&lt;!&ndash;                  <we-input string="Date" data-set-date="" type="date"/>&ndash;&gt;
+&lt;!&ndash;                <span class="fa fa-calendar date-icon"></span>&ndash;&gt;
+
+            </div>
+        </xpath>
+    </template>
+
+-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    <!-- Ajout du snippet dynamique dans le menu drag and drop -->
+    <template id="place_into_bar" inherit_id="website.snippets" priority="8" name="Place into Bar">
+        <xpath expr="//div[@id='snippet_effect']//t[@t-snippet][last()]" position="after">
+            <t t-snippet="flexible__snippet.dynamic_snippet_flexible_template"
+               t-thumbnail="/flexible__snippet/static/src/image/splash_coffe.png"/>
+        </xpath>
+    </template>
+</odoo>

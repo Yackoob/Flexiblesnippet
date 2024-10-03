@@ -1,0 +1,3 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_flexible__snippet_flexible__snippet,flexible__snippet.flexible__snippet,model_flexible__snippet,base.group_user,1,1,1,1
+access_flexible_snippet_template_flexible_snippet_template,flexible_snippet_template,model_flexible_snippet_template,base.group_user,1,1,1,1
